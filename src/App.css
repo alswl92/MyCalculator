@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+:root {
+  --one: #22223b;
+  --two: #4a4e69;
+  --three: #9a8c98;
+  --four: #c9ada7;
+  --darkfont: #262626;
+  --lightfont: #F2E9E4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'fira sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: #e9ebee;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh ;
+}
+
+.calculator{
+  height: 33em;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--one);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 22px 64px rgba(0,0,0,0.2);
+  padding: 16px;
+}
+
+.display{
+  background-color: var(--one);
+  text-align: right;
+  font-size: 45px;
+  height: 75px;
+  padding: 20px;
   color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.display span{
+  font-size: 18px;
+  color: #888;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keypad{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 5em);
+  gap: 2px 2px;
+
+  height: 496px;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background-color: var(--four);
+  color: var(--darkfont);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 15%;
+}
+
+button:hover {
+  background-color: var(--lightfont);
+}
+
+#del {
+  background-color: var(--two);
+  color: var(--lightfont);
+}
+
+#del:hover{
+  background-color: #303245;
+}
+
+#minus {
+  background-color: var(--two);
+  color: var(--lightfont);
+}
+
+#minus:hover{
+  background-color: #303245;
+}
+
+#plus {
+  background-color: var(--two);
+  color: var(--lightfont);
+}
+
+#plus:hover{
+  background-color: #303245;
+}
+
+#enter{
+  grid-area: 4 / 4 / span 2 / 5;
+  background-color: var(--two);
+  color: var(--lightfont);
+}
+
+#enter:hover{
+  background-color: #303245;
+}
+
+#zero {
+  grid-column: 2 / span 2; 
+}
+
+#reset{
+  background-color: var(--three);
+}
+
+#reset:hover{
+  background-color: var(--lightfont);
+}
+
+#divide{
+  background-color: var(--three);
+}
+
+#divide:hover{
+  background-color: var(--lightfont);
+}
+
+#multiply{
+  background-color: var(--three);
+}
+
+#multiply:hover{
+  background-color: var(--lightfont);
 }
