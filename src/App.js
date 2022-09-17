@@ -53,8 +53,8 @@ function App() {
              <button onClick={() => updateCalc('2')}>2</button>
              <button onClick={() => updateCalc('3')}>3</button>
              <button id = "enter" onClick={calculate}>=</button>
-             <button id = "dot" onClick={() => updateCalc('.')}>.</button>
              <button id = "zero" onClick={() => updateCalc('0')}>0</button>
+             <button id = "dot" onClick={() => updateCalc('.')}>.</button>
         </div>
       </div>
     </div>
